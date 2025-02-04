@@ -1,0 +1,46 @@
+[project]
+name = "astral-ai"
+version = "0.1.8"
+description = "Astral AI is an AI 'framework' that moves at the speed of AI discovery."
+readme = "README.md"
+authors = [
+    { name = "Chris Maresca", email = "chris@chrismaresca.dev" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "annotated-types==0.7.0",
+    "anyio==4.8.0",
+    "certifi==2024.12.14",
+    "colorama==0.4.6",
+    "distro==1.9.0",
+    "h11==0.14.0",
+    "httpcore==1.0.7",
+    "httpx==0.28.1",
+    "idna==3.10",
+    "jinja2==3.1.5",
+    "jiter==0.8.2",
+    "markupsafe==3.0.2",
+    "openai==1.60.1",
+    "pydantic-core==2.27.2",
+    "pydantic==2.10.6",
+    "python-dotenv==1.0.1",
+    "python-multipart==0.0.20",
+    "sniffio==1.3.1",
+    "tqdm==4.67.1",
+    "typing-extensions==4.12.2",
+    "pyyaml>=6.0.2",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+astral-ai = "astral_ai:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

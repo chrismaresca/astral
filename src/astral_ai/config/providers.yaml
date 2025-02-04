@@ -1,0 +1,15 @@
+# providers.yaml
+providers:
+  - name: "openai"
+    llm_client: "OpenAILLMClient"
+  - name: "anthropic"
+    llm_client: "AnthropicLLMClient"
+  - name: "gemini"
+    llm_client: "GeminiLLMClient"
+  - name: "deepseek"
+    llm_client: "DeepSeekLLMClient"
+  - name: "groq"
+    llm_client: "GroqLLMClient"
+  - name: "huggingface"
+    llm_client: "HuggingFaceLLMClient"
+    
