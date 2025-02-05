@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------- #
-# Agent Class
+# LLM Class
 # -------------------------------------------------------------------------------- #
 
 """
@@ -19,10 +19,10 @@ from typing import Any, Dict, List, Optional, Union
 from astral_ai.typing.models import ModelName, PROVIDER_MODEL_NAMES
 
 # Astral AI Agent Types
-from astral_ai.agents.types import ReasoningEffort, Tool, ToolChoiceOption
+from astral_ai.clients.types import ReasoningEffort, Tool, ToolChoiceOption
 
 # Astral AI LLM Clients
-from astral_ai.agents.clients.base import BaseLLMClient
+from astral_ai.clients.providers.base import BaseLLMClient
 
 # Astral AI Constants (provider mapping)
 from astral_ai.constants.mappings import PROVIDER_MAPPING
@@ -37,11 +37,11 @@ from astral_ai.typing.model_response import ChatResponse, StructuredOutputRespon
 from astral_ai.logger import logger
 
 # -------------------------------------------------------------------------------- #
-# Agent Class
+# LLM Class
 # -------------------------------------------------------------------------------- #
 
 
-class Agent:
+class LLM:
     def __init__(self,
                  model_name: ModelName,
                  messages: Optional[Union[MessageList, List[Message], Message]] = None,
@@ -111,13 +111,11 @@ class Agent:
         return self.client.run_structured_async(structured_model, messages, return_usage, return_cost)
 
 
-
 # -------------------------------------------------------------------------------- #
 # Test Cases
 # -------------------------------------------------------------------------------- #
-
 if __name__ == "__main__":
-    agent = Agent(model_name="o1-mini")
+    llm = LLM(model_name="o1-mini")
 
     from astral_ai.typing.messages import TextMessage
 
@@ -126,10 +124,5 @@ if __name__ == "__main__":
         TextMessage(role="user", text="What is the capital of the moon?")
     ]
 
-    response = agent.run(messages=messages, return_usage=False, return_cost=False)
+    response = llm.run(messages=messages, return_usage=False, return_cost=False)
     print(response)
-
-
-
-
-

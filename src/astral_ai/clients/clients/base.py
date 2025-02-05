@@ -31,7 +31,7 @@ from astral_ai.constants.supported_models import (
 from astral_ai.typing.usage import AIUsage, AICost
 
 # Agent Types
-from astral_ai.agents.types import (
+from astral_ai.clients.types import (
     ReasoningEffort,
     Tool,
     ToolChoiceOption,
@@ -41,7 +41,7 @@ from astral_ai.agents.types import (
 )
 
 # Astral AI Utils
-from astral_ai.agents.utils import (
+from astral_ai.clients.utils import (
     handle_no_messages,
     standardize_messages,
     count_message_roles,
@@ -49,7 +49,7 @@ from astral_ai.agents.utils import (
 )
 
 # Astral AI Exceptions
-from astral_ai.agents.exceptions import (
+from astral_ai.clients.exceptions import (
     ReasoningEffortNotSupportedError,
     ToolsNotSupportedError,
     StructuredOutputNotSupportedError,
@@ -57,7 +57,7 @@ from astral_ai.agents.exceptions import (
 )
 
 # Astral AI Providers
-from astral_ai.agents.providers import  ProviderCompletionParams
+from astral_ai.clients.provider_params import  ProviderCompletionParams
 
 # Astral AI imports
 from astral_ai.typing.model_response import StructuredOutputResponse, ChatResponse

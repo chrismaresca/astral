@@ -10,7 +10,7 @@
 from typing import Dict
 
 # Project-specific imports
-from astral_ai.agents.clients import *
+from astral_ai.clients.providers import *
 
 from astral_ai.typing.models import ModelProvider
 

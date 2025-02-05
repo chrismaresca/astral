@@ -20,7 +20,7 @@ from typing import (
 from astral_ai.typing.models import ModelName, PROVIDER_MODEL_NAMES, ModelProvider, OpenAIModels, AnthropicModels
 
 # Astral Agent Types
-from astral_ai.agents.types import ReasoningEffort, Tool, ToolChoiceOption, ValidatedBaseLLMCallParams
+from astral_ai.clients.types import ReasoningEffort, Tool, ToolChoiceOption, ValidatedBaseLLMCallParams
 
 
 # -------------------------------------------------------------------------------- #

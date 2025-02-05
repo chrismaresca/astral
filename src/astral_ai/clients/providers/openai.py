@@ -28,10 +28,10 @@ from openai.types.chat import ChatCompletion, ParsedChatCompletion
 # Project Types
 
 # Base Client Types
-from astral_ai.agents.clients.base import BaseLLMCallParams
+from astral_ai.clients.providers.base import BaseLLMCallParams
 
 # Provider Types
-from astral_ai.agents.providers import OpenAICompletionParams
+from astral_ai.clients.provider_params import OpenAICompletionParams
 
 # Astral AI Types
 from astral_ai.typing.models import ModelName
@@ -46,18 +46,18 @@ from astral_ai.typing.messages import Message, MessageList
 from astral_ai.typing.clients import OpenAILLMClientT
 
 # Decorators
-from astral_ai.agents.decorators.usage import calculate_cost_and_usage
+from astral_ai.clients.decorators.usage import calculate_cost_and_usage
 
 # Base Exceptions
 from astral_ai.exceptions import APIKeyNotFoundError
-from astral_ai.agents.exceptions import LLMResponseError, LLMResponseParseError, LLMResponseCompletionError
+from astral_ai.clients.exceptions import LLMResponseError, LLMResponseParseError, LLMResponseCompletionError
 
 # Agent Types
-from astral_ai.agents.types import ReasoningEffort, ModelSettings, Tool, ToolChoiceOption
+from astral_ai.clients.types import ReasoningEffort, ModelSettings, Tool, ToolChoiceOption
 
 
 # Astral AI imports
-from astral_ai.agents.clients.base import BaseLLMClient
+from astral_ai.clients.providers.base import BaseLLMClient
 
 # Logger
 from astral_ai.logger import AIModuleLogger
@@ -148,7 +148,7 @@ class OpenAILLMClient(BaseLLMClient[OpenAILLMClientT]):
         # Validate the base parameters.
         validated_params = self._validate_and_unpack_parameters(base_params, structured_model)
 
-        from astral_ai.agents.providers import to_openai_format
+        from astral_ai.clients.provider_params import to_openai_format
 
         return to_openai_format(validated_params)
 

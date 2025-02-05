@@ -17,7 +17,7 @@ from astral_ai.typing.models import ModelName
 from astral_ai.typing.messages import Message, MessageList
 
 # Project Messages
-from astral_ai.agents.exceptions import MessagesNotProvidedError, InvalidMessageError
+from astral_ai.clients.exceptions import MessagesNotProvidedError, InvalidMessageError
 
 # Logging
 from astral_ai.logger import logger
